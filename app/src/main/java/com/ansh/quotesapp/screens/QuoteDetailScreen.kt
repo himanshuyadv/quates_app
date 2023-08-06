@@ -1,5 +1,6 @@
 package com.ansh.quotesapp.screens
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -22,11 +23,16 @@ import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.ansh.quotesapp.DataManager
 import com.ansh.quotesapp.models.Quote
 
 
 @Composable
 fun QuoteDetail(quote: Quote) {
+
+    BackHandler {
+        DataManager.switchPages(null)
+    }
     Box(
         contentAlignment = Alignment.Center,
 

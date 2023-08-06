@@ -30,7 +30,7 @@ object DataManager {
 
     }
 
-    fun switchPages(quote:Quote){
+    fun switchPages(quote:Quote?){
         if (currentPage.value==Pages.LISTING){
             currentPage.value=Pages.DETAIL
             currentQuote=quote
