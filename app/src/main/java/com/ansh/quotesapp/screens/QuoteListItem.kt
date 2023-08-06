@@ -31,11 +31,11 @@ import com.ansh.quotesapp.models.Quote
 
 
 @Composable
-fun QuoteListItem(quote: Quote, onClick: () -> Unit) {
+fun QuoteListItem(quote: Quote, onClick: (quote:Quote) -> Unit) {
 
     Card(
         modifier = Modifier.padding(8.dp).clickable {
-            onClick
+            onClick.invoke(quote)
         }
     ) {
         Row(

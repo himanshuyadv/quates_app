@@ -29,6 +29,7 @@ import com.ansh.quotesapp.models.Quote
 fun QuoteDetail(quote: Quote) {
     Box(
         contentAlignment = Alignment.Center,
+
         modifier = Modifier.fillMaxWidth(1f)
             .background(
                 Brush.sweepGradient(
